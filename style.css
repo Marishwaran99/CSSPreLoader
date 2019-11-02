@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  width: 100vw;
+  font-family: "Work Sans", sans-serif;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+.airplane-img {
+  width: 20rem;
+  animation: airplane 1s linear infinite alternate-reverse;
+}
+h2 {
+  position: absolute;
+  bottom: 10%;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.cloud1,
+.cloud2,
+.cloud3 {
+  position: absolute;
+  width: 10rem;
+  right: 0;
+  z-index: -1;
+}
+.cloud1 {
+  top: 25%;
+  transform: translate(100%, -25%);
+  animation: clouds 3s linear infinite;
+}
+.cloud2 {
+  transform: translate(100%, -50%);
+  animation: clouds 2s linear infinite;
+  top: 50%;
+}
+.cloud3 {
+  transform: translate(100%, -75%);
+  animation: clouds 4s linear infinite;
+  top: 75%;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section img {
+  width: 20rem;
+}
+section p {
+  font-size: 2rem;
+}
+
+@keyframes airplane {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(5rem);
+  }
+}
+
+@keyframes clouds {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 130%;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
